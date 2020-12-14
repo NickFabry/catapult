@@ -4,11 +4,8 @@
 
 
 """ This is part of a python CLI application template, specifically the
-payload - the part where most of the code lives. It is not expected to be
-run directly, but to be imported by other code or by launcher.py.
-
-It is expected that it have a main() function that is called with the 
-args from argparse.
+auxiliary functions; functions of generic use that don't necessarily
+belong to one particular application.
 
 See the README.md for more details.
 """
