@@ -20,6 +20,17 @@ import logging
 import datetime
 from pathlib import Path
 
+# These are here for one function, pdf2str.
+from io import StringIO
+from pdfminer.converter import TextConverter
+from pdfminer.layout import LAParams
+from pdfminer.pdfdocument import PDFDocument
+from pdfminer.pdfinterp import PDFResourceManager, PDFPageInterpreter
+from pdfminer.pdfpage import PDFPage
+from pdfminer.pdfparser import PDFParser
+
+
+
 log = logging.getLogger(__name__)
 
 
