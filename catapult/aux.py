@@ -7,6 +7,8 @@
 auxiliary functions; functions of generic use that don't necessarily
 belong to one particular application.
 
+Added some text just to get around git being mad.
+
 See the README.md for more details.
 """
 
