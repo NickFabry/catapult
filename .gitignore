@@ -125,3 +125,17 @@ dmypy.json
 
 # OS X
 .DS_Store
+
+# Intellij/JetBrains/PyCharm config
+.idea
+.idea/
+idea
+idea/
+
+# Visual Studio config
+.vs
+/.vs
+.vs/
+
+# Excel working files
+~$*

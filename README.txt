@@ -1,8 +1,8 @@
-This is my attempt to provide a decent template for python CLI based projects, with the sample name, envy. In order to use this, one should copy this entire directory structure to a new directory, EXCEPT /.venv . The purpose of /.venv is a location to store a python venv; by its nature, it is environment dependent, and thus should not be included in either git repositories or other syncing mechanisms. The .gitignore file excludes the /.venv directory.
+This is my attempt to provide a decent template for python CLI based projects, with the sample name, catapult. In order to use this, one should copy this entire directory structure to a new directory, EXCEPT /.venv . The purpose of /.venv is a location to store a python venv; by its nature, it is environment dependent, and thus should not be included in either git repositories or other syncing mechanisms. The .gitignore file excludes the /.venv directory.
 
 So, to set up a new python project in venv, do the following:
 
-- Copy the top level envy directory into your new project directory, or, clone it from the envy git repo.
+- Copy the top level catapult directory into your new project directory, or, clone it from the catapult git repo.
 
 - If you've cloned it, delete the .git directory so there is no association with the original template.
 
@@ -31,7 +31,7 @@ cd /path_to_project/project_name/venv; source bin/activate
 pip install pandas
 
 - Put a soft link in bin to your main runner script:
-ln -s bin/run_my_script project_name/main.py
+ln -s bin/run_my_script project_name/runner.py
 
 - Deactivate the environment
 deactivate
