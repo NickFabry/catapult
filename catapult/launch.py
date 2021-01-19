@@ -33,8 +33,6 @@ import sys, os
 
 
 
-# This was lifted directly from StackOverflow:
-# https://stackoverflow.com/questions/2183233/how-to-add-a-custom-loglevel-to-pythons-logging-facility
 def addLoggingLevel(levelName, levelNum, methodName=None):
     """
     Comprehensively adds a new logging level to the `logging` module and the
@@ -59,6 +57,8 @@ def addLoggingLevel(levelName, levelNum, methodName=None):
     >>> logging.TRACE
     5
 
+    This function was lifted directly from StackOverflow:
+    https://stackoverflow.com/questions/2183233/how-to-add-a-custom-loglevel-to-pythons-logging-facility
     """
     if not methodName:
         methodName = levelName.lower()

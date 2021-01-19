@@ -35,6 +35,46 @@ log = logging.getLogger(__name__)
 
 
 
+def partition(seq, fxn):
+    """
+    This is Ian Bickering's stab at a partition function in python. A usage
+    example follows:
+
+    def group(seq): 
+        result = {} 
+        for item, category in seq: 
+            result.setdefault(category, []).append(item) 
+        return result 
+
+    partitioned = group((color, is_primary(color)) for color in colors) 
+    by_first_letter = group((name, name[0]) for name in names) 
+
+    I prefer that the partitioning function is passed in, so the above
+    call could be replaced with:
+
+    partitioned = group(colors, is_primary)
+
+    Of course, that makes the second call slightly more verbose:
+
+    by_first_letter = group(names, lambda x: x[0])
+
+    I still prefer it! And, I'm going to call it 'partition'.
+
+    A point worth noting is that the order of the elements is stable between
+    the initial seq and the subsequences in each partition.
+
+    This function partitions a sequence, partitioning it based on the return
+    value of fxn when appled to each item of the sequence. Example:
+    >>> partition([1,2,3,4,5,6,7,8,9,10], greatest_prime_divisor
+    {None: [1], 2: [2, 4, 8], 3: [3, 9], 5: [5, 10], 7: [7]}
+    """
+
+    result = {}
+    for item in seq:
+        result.setdefault(fxn(item), []).append(item)
+    return result
+
+
 def pdf2str(path):
     """This basic function wraps all the machinery of the pdfminer.six
     library and presents it as a very simple interface. One path to a file in,
