@@ -1,0 +1,12 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "catapult"
+author = "Nick Fabry"
+author-email = "nick.fabry@coredump.us"
+description-file = "README.txt"
+
+[tool.flit.scripts]
+catapult = "catapult.launch:main"
